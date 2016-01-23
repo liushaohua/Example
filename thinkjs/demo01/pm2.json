@@ -1,0 +1,16 @@
+{
+  "apps": [{
+    "name": "E:my_progithubExamplethinkjsE:my_progithubExamplethinkjsdemo01",
+    "script": "www/production.js",
+    "cwd": "E:\my_pro\github\Example\thinkjs/E:\my_pro\github\Example\thinkjs\demo01",
+    "exec_mode": "cluster",
+    "instances": 0,
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}
