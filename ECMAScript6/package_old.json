@@ -1,0 +1,13 @@
+{
+    "name": "es6-build",
+    "version": "0.0.1",
+    "description": "es6-build",
+    "scripts": {
+        "build": "babel --loose all --stage 0 --modules common src/ --out-dir ./",
+        "watch": "npm run build -- --watch"
+    },
+    "devDependencies": {
+        "babel": "5.8.21",
+        "fecs": "^0.4.13"
+    }
+}

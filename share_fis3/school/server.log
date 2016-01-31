@@ -1,0 +1,19 @@
+ Listening on http://127.0.0.1:803
+127.0.0.1 - GET / HTTP/1.1 200 302 - 15.347 ms
+127.0.0.1 - GET /favicon.ico HTTP/1.1 404 24 - 7.316 ms
+127.0.0.1 - GET / HTTP/1.1 200 302 - 2.599 ms
+127.0.0.1 - GET /favicon.ico HTTP/1.1 404 24 - 1.724 ms
+127.0.0.1 - GET /output HTTP/1.1 303 - - 3.197 ms
+127.0.0.1 - GET /output/ HTTP/1.1 200 252 - 2.604 ms
+127.0.0.1 - GET /output/html HTTP/1.1 303 - - 0.815 ms
+127.0.0.1 - GET /output/html/ HTTP/1.1 200 618 - 2.771 ms
+127.0.0.1 - GET /output/html/forenotice.html HTTP/1.1 200 1746 - 7.806 ms
+127.0.0.1 - GET /output/html/home.html HTTP/1.1 200 2723 - 2.660 ms
+127.0.0.1 - GET /output/html/img/favicon.ico HTTP/1.1 404 40 - 1.016 ms
+127.0.0.1 - GET /output/html/offline.html HTTP/1.1 200 1767 - 2.086 ms
+127.0.0.1 - GET /output/static HTTP/1.1 303 - - 1.994 ms
+127.0.0.1 - GET /output/static/ HTTP/1.1 200 499 - 2.433 ms
+127.0.0.1 - GET /resource HTTP/1.1 303 - - 2.968 ms
+127.0.0.1 - GET /resource/ HTTP/1.1 200 1000 - 2.830 ms
+127.0.0.1 - GET /html/ HTTP/1.1 404 18 - 2.648 ms
+127.0.0.1 - GET /favicon.ico HTTP/1.1 404 24 - 0.758 ms

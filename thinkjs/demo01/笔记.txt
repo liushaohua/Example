@@ -1,0 +1,13 @@
+通过下面的命令即可安装 ThinkJS：
+
+npm install thinkjs@2 -g --verbos
+
+创建项目
+thinkjs new project_path --es6
+
+cd project_path && npm install
+
+npm start
+
+添加模块
+thinkjs module list

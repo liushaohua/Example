@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "compile": "babel --optional runtime src/ --out-dir ./",
+	"watch": "npm run compile -- --watch"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.3.3"
+  },
+  "devDependencies": {
+    "babel": "^5.3.3"
+  }
+}
