@@ -11,3 +11,106 @@ npm start
 
 添加模块
 thinkjs module list
+
+启动后：
+http://127.0.0.1:8360/
+
+创建模型
+可以在项目目录下通过命令 thinkjs model [name] 来创建模型：
+
+
+rpm的一般是/usr/local
+
+CentOS 7的yum源中貌似没有正常安装mysql时的mysql-sever文件，需要去官网上下载
+ 	
+# wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+# rpm -ivh mysql-community-release-el7-5.noarch.rpm
+# yum install mysql-community-server
+成功安装之后重启mysql服务
+ 	
+# service mysqld restart
+初次安装mysql是root账户是没有密码的，自行设置下密码
+
+连接数据库
+mysql -uroot -p
+
+
+让MySQL服务器被远程访问
+
+1、在本机登入mysql后，更改“mysql”数据库里的“user”表里的“host”项，从”localhost”改为'%'。
+mysql>
+mysql>use mysql;
+mysql>select 'host' from user where user='root';
+
+#查看mysql库中的user表的host值（即可进行连接访问的主机/IP名称）
+mysql>update user set host = '%' where user ='root';
+
+如果报错：ERROR 1062 (23000): Duplicate entry '%-root' for key 'PRIMARY'
+
+先看下：select host from user where user = 'root';
+查看一下host是否已经有了%这个值，如果有了直接执行下面的flush privileges;即可）
+
++--------------+------+
+| host         | user |
++--------------+------+
+| %            | root |
+| 127.0.0.1    | root |
+| ::1          | root |
+| iz25zf7cpbkz | root |
++--------------+------+
+
+mysql>flush privileges;
+mysql>select host,user from user where user='root';
+mysql>quit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
