@@ -12,6 +12,15 @@ npm start
 添加模块
 thinkjs module list
 
+
+
+创建 REST API
+
+通过 thinkjs controller [name] --rest 即可创建一个 REST API。如：
+
+thinkjs controller home/ticket --rest
+
+
 启动后：
 http://127.0.0.1:8360/
 

@@ -5,20 +5,19 @@
  */
 export default {
   type: 'mysql',
+  host: '123.57.46.65',
+  port: '3306',
+  name: 'weibo',
+  user: 'root',
+  pwd: '1qaz2wsx3edc!',
+  prefix: 'weibo_',
+  encoding: 'utf8',
+  nums_per_page: 10,
   log_sql: true,
   log_connect: true,
-  adapter: {
-    mysql: {
-      host: '127.0.0.1',
-      port: '',
-      database: '',
-      user: '',
-      password: '',
-      prefix: 'think_',
-      encoding: 'utf8'
-    },
-    mongo: {
-
-    }
+  cache: {
+    on: true,
+    type: '',
+    timeout: 3600
   }
 };

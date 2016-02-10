@@ -27,7 +27,7 @@ export default class extends Base {
 			this.assign('title', "分类");
 		}
 		map.ispage = 1;	
-		map.status = 1;
+		map.status = 1;	
 		let data=await this.model('contents').getList(map,page,6);
         /*
         *注1：此处略坑，因为之前使用ID做文章标识，为了兼容之前的数据才这样写的

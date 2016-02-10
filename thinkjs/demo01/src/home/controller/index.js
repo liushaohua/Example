@@ -7,14 +7,9 @@ export default class extends Base {
    * index action
    * @return {Promise} []
    */
-  indexAction(){
-    //auto render template file index_index.html
-	this.assign('title', '首页');
-	let page = this.get('page') ? this.get('page') : 1;
-	if (this.get('tag')) {
-		this.assign('title', "tag");
-	}
-	this.assign('page', page);
+  async indexAction(){
+	let data = await this.model('list').getList();
+	this.assign('data', data);
     return this.display();
   }
   
@@ -33,4 +28,19 @@ export default class extends Base {
 	this.assign('id', id);
     this.display();
   }
+  
+  //广播消息
+  async sendAction() {
+	  if(this.isPost()){
+		  await this.model('list').addList(this.post());
+          this.success();
+      }
+  }
+  
+  async deleteAction() {
+	  if (this.isAjax()) {
+		  await this.model('list').delete_list(this.post('id'));	
+          this.success();
+	  }
+  }	  
 }
