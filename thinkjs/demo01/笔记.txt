@@ -74,7 +74,21 @@ https://thinkjs.org/zh-cn/doc/2.0/deploy.html
 
 
 
-npm run compile 编译
+
+
+线上部署流程：
+
+代码编译：
+npm run compile 
+
+修改pm2.json：
+将 cwd 配置值改为线上真实的项目路径，然后在项目目录下使用下面的命令来启动/重启服务
+
+
+使用 nginx 做反向代理-二级域名的话需要到dnsport上增加A记录
+
+db文件记得要上传到服务器上
+
 
 
 
