@@ -78,6 +78,10 @@ https://thinkjs.org/zh-cn/doc/2.0/deploy.html
 
 线上部署流程：
 
+推代码到线上
+
+安装依赖，不需要npm install,只需要 thinkjs和runtime 
+
 代码编译：
 npm run compile 
 

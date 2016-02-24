@@ -5,7 +5,8 @@ var Path = require("path");
 var Child_process = require('child_process');
 var root = {
 	'/update': '../blog/',
-	'/e_update': '../Example'
+	'/e_update': '../Example',
+	'/img_update': '../img.liushaohua.cn'
 };
 
 
