@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>webpack ES6 demo</title>
+</head>
+<body>
+<script src="http://j2.58cdn.com.cn/mis/common/dep/echarts-2.2.4/build/dist/echarts-all.js?v=20151219"></script>
+<script src="dist/main.js"></script>
+<script>
+	require.config({
+		paths: {
+			echarts: 'http://j2.58cdn.com.cn/mis/common/dep/echarts-2.2.4/build/dist'
+		}
+	});
+</script>
+</body>
+</html>

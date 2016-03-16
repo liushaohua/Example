@@ -7,9 +7,9 @@ export default class extends Base {
    * index action
    * @return {Promise} []
    */
-  indexAction(){
-    //auto render template file index_index.html
-    return this.display();
+  async indexAction(){
+    this.assign('userName',this.session('user') || 'aa')
+    this.display();
   }
 
   /*
@@ -27,6 +27,7 @@ export default class extends Base {
           };
           let data = await this.model('users').login(map);
           if (data) {
+              this.session('user',map.user);
               this.redirect('/?login=1');
           } else {
               this.redirect('/?login=0');
@@ -51,6 +52,17 @@ export default class extends Base {
           if (data) {
               this.redirect('/login');
           }
+      }
+  }
+
+  /*
+  * 退出
+  *
+  **/
+  async outAction() {
+      if (this.isAjax()) {
+          this.session();
+          this.success();
       }
   }
 }
