@@ -1,0 +1,1 @@
+define("modules/util/controller/index.es",function(){"use strict";console.log(1),console.log(2)});

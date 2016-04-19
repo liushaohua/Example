@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>页面1</title>    <!--[if lt IE 9]>
+        <script src="/static/lib/html5-shim.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="/static/css/common.css" />
+    <link rel="stylesheet" href="/static/html/header/header.css" />
+    <link rel="stylesheet" href="/static/html/footer/footer.css" />
+</head>
+<body>
+    <div class="container"><header class="header">
+    <h2>头部</h2>
+</header><footer>
+    我是footer
+</footer>
+
+    </div>
+<script src="/static/lib/mod.js"></script>
+<script>/*resourcemap*/
+require.resourceMap({
+  "res": {
+    "modules/app/home/config/config.es": {
+      "url": "/static/app/home/config/config.js",
+      "type": "js"
+    },
+    "modules/util/controller/index.es": {
+      "url": "/static/util/controller/index.js",
+      "type": "js"
+    },
+    "modules/app/home/controller/index.es": {
+      "url": "/static/app/home/controller/index.js",
+      "type": "js",
+      "deps": [
+        "modules/util/controller/index.es"
+      ]
+    },
+    "modules/app/home/index.es": {
+      "url": "/static/app/home/index.js",
+      "type": "js",
+      "deps": [
+        "modules/app/home/config/config.es",
+        "modules/app/home/controller/index.es"
+      ]
+    }
+  },
+  "pkg": {}
+});</script>
+<script src="/static/lib/es5-shim.js"></script>
+<script>
+		require(['modules/app/home/index.es']);
+	</script>
+<script type="text/javascript" charset="utf-8" src="http://10.252.55.2:8133/livereload.js"></script></body>
+</html>

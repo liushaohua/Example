@@ -1,0 +1,124 @@
+{
+    "res": {
+        "modules/html/header/header.less": {
+            "uri": "/static/html/header/header.css",
+            "type": "css"
+        },
+        "modules/html/footer/footer.less": {
+            "uri": "/static/html/footer/footer.css",
+            "type": "css"
+        },
+        "modules/css/common.less": {
+            "uri": "/static/css/common.css",
+            "type": "css"
+        },
+        "lib/es5-shim.js": {
+            "uri": "/static/lib/es5-shim.js",
+            "type": "js"
+        },
+        "lib/html5-shim.js": {
+            "uri": "/static/lib/html5-shim.js",
+            "type": "js"
+        },
+        "lib/mod.js": {
+            "uri": "/static/lib/mod.js",
+            "type": "js"
+        },
+        "modules/app/home/index.es": {
+            "uri": "/static/app/home/index.js",
+            "type": "js",
+            "deps": [
+                "modules/app/home/config/config.es",
+                "modules/app/home/controller/index.es"
+            ]
+        },
+        "modules/app/home/config/config.es": {
+            "uri": "/static/app/home/config/config.js",
+            "type": "js"
+        },
+        "modules/app/home/controller/index.es": {
+            "uri": "/static/app/home/controller/index.js",
+            "type": "js",
+            "deps": [
+                "modules/util/controller/index.es"
+            ]
+        },
+        "modules/util/controller/index.es": {
+            "uri": "/static/util/controller/index.js",
+            "type": "js"
+        },
+        "modules/app/test.es": {
+            "uri": "/static/app/test.js",
+            "type": "js",
+            "deps": [
+                "components/jquery/jquery.js",
+                "modules/ui/base/base.es",
+                "components/es6-promise/es6-promise.js",
+                "modules/util/template/template.es",
+                "components/underscore/underscore.js",
+                "modules/lib/data.js/data.js"
+            ]
+        },
+        "components/jquery/jquery.js": {
+            "uri": "/static/components/jquery/jquery.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "components/jquery/jquery"
+            }
+        },
+        "modules/ui/base/base.es": {
+            "uri": "/static/ui/base/base.js",
+            "type": "js",
+            "deps": [
+                "modules/util/event/event.es"
+            ]
+        },
+        "modules/util/event/event.es": {
+            "uri": "/static/util/event/event.js",
+            "type": "js",
+            "deps": [
+                "components/jquery/jquery.js"
+            ]
+        },
+        "components/es6-promise/es6-promise.js": {
+            "uri": "/static/components/es6-promise/es6-promise.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "components/es6-promise/es6-promise"
+            }
+        },
+        "modules/util/template/template.es": {
+            "uri": "/static/util/template/template.js",
+            "type": "js",
+            "deps": [
+                "modules/lib/template/template.js"
+            ]
+        },
+        "modules/lib/template/template.js": {
+            "uri": "/static/lib/template/template.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "modules/lib/template/template"
+            }
+        },
+        "components/underscore/underscore.js": {
+            "uri": "/static/components/underscore/underscore.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "components/underscore/underscore"
+            }
+        },
+        "modules/lib/data.js/data.js": {
+            "uri": "/static/lib/data.js/data.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "modules/lib/data.js/data"
+            }
+        },
+        "test/dynamic.js": {
+            "uri": "/test/dynamic.js",
+            "type": "js"
+        }
+    },
+    "pkg": {}
+}

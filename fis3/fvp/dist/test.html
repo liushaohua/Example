@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面_fis3 base</title>
+    <link rel="stylesheet" href="modules/css/common.scss" />
+</head>
+<body>
+    <div class="container">
+        <h1>测试页面</h1>
+    </div>
+<script src="/static/lib/mod.js"></script>
+<script>/*resourcemap*/
+require.resourceMap({
+  "res": {
+    "components/jquery/jquery": {
+      "url": "/static/components/jquery/jquery.js",
+      "type": "js"
+    },
+    "modules/util/event/event.es": {
+      "url": "/static/util/event/event.js",
+      "type": "js",
+      "deps": [
+        "components/jquery/jquery"
+      ]
+    },
+    "modules/ui/base/base.es": {
+      "url": "/static/ui/base/base.js",
+      "type": "js",
+      "deps": [
+        "modules/util/event/event.es"
+      ]
+    },
+    "components/es6-promise/es6-promise": {
+      "url": "/static/components/es6-promise/es6-promise.js",
+      "type": "js"
+    },
+    "modules/lib/template/template": {
+      "url": "/static/lib/template/template.js",
+      "type": "js"
+    },
+    "modules/util/template/template.es": {
+      "url": "/static/util/template/template.js",
+      "type": "js",
+      "deps": [
+        "modules/lib/template/template"
+      ]
+    },
+    "components/underscore/underscore": {
+      "url": "/static/components/underscore/underscore.js",
+      "type": "js"
+    },
+    "modules/lib/data.js/data": {
+      "url": "/static/lib/data.js/data.js",
+      "type": "js"
+    },
+    "modules/app/test.es": {
+      "url": "/static/app/test.js",
+      "type": "js",
+      "deps": [
+        "components/jquery/jquery",
+        "modules/ui/base/base.es",
+        "components/es6-promise/es6-promise",
+        "modules/util/template/template.es",
+        "components/underscore/underscore",
+        "modules/lib/data.js/data"
+      ]
+    }
+  },
+  "pkg": {}
+});
+
+        require.async(['modules/app/test.es']);
+    </script>
+<script type="text/javascript" charset="utf-8" src="http://10.252.55.2:8133/livereload.js"></script></body>
+</html>
