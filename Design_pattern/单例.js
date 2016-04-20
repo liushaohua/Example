@@ -37,7 +37,7 @@ let createLoginLayer = function () {
     let div = document.createElement('div');
     div.innerHTML = 'im loginWindow';
     div.style.display = 'none';
-    document.body.appendChild('div');
+    document.body.appendChild(div);
     return div;
 }
 
