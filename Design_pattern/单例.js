@@ -1,6 +1,6 @@
 /* 登录弹窗
-* 惰性单例
-*/
+ * 惰性单例
+ */
 
 let createLoginLayer = (function () {
     let div;
