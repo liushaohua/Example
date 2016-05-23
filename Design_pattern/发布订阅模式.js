@@ -10,11 +10,7 @@ let Event = (function() {
       }
       clientList[key].push(fn);
     },
-
-    /**
-     *  这有个坑 emit = () => {} 拿不到参数
-     */
-    emit = function() {
+    emit = () => {
       let key = Array.prototype.shift.call(arguments),
         fns = clientList[key];
 
@@ -32,7 +28,6 @@ let Event = (function() {
     emit
   }
 })();
-
 
 let header = (function() {
   Event.on('loginSucc', function(data) {
