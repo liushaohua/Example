@@ -3,12 +3,25 @@
  * template config
  */
 export default {
-  type: 'ejs',
-  content_type: 'text/html',
-  file_ext: '.html',
-  file_depr: '_',
+  type: 'nunjucks',
   root_path: think.ROOT_PATH + '/view',
   adapter: {
-    ejs: {}
+    ejs: {
+      prerender: () => {
+      }
+    },
+    nunjucks: {
+      prerender: (nunjucks, env) => {
+        // 美化时间
+        env.addFilter('elapsed', (date, str) => {
+          return Util.parseDate.elapsed(date, str);
+        });
+
+        // 日期格式化
+        env.addFilter('format', (date, str) => {
+          return Util.parseDate.format(date, str);
+        });
+      }
+    }
   }
 };

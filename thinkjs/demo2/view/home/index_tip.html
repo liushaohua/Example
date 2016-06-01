@@ -20,11 +20,14 @@ code{  padding: 2px 4px;font-size: 90%;color: #c7254e;background-color: #f9f2f4;
 </style>
 </head>
 <body>
-{% if userName %}
-    {{userName}}<a href="javascirpt:;" class="getOut">退出</a>
-{% else %}
-    <a href="/login">登录</a>
-{% endif %}
+{% block main_inner %}
+    <div class="center">
+        {{ msg or 'ok~'}}&nbsp;
+        {% if back_url %}
+            <a href="{{ back_url }}">返回</a>
+        {% endif %}
+    </div>
+{% endblock %}
 </body>
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 <script src="/static/js/index.js"></script>

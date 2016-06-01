@@ -1,13 +1,8 @@
-/**
- * this file will be loaded before server started
- * you can register middleware
- * https://thinkjs.org/doc/middleware.html
- */
+'use strict';
+
+import compress from 'think-compress-html';
 
 /**
- * 
- * think.middleware('xxx', http => {
- *   
- * })
- * 
+ * 载入压缩html 中间件
  */
+think.middleware('think-compress-html', compress);

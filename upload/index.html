@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>生成服务器页面</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<form class="upload">
+		<input type="file"/>
+		<input type="text" placeholder="项目名称,例:liushaohua_text"/>
+		<p>
+			<button type="submit">生成服务二维码</button>
+		</p>
+	</form>
+	<div id="output" style="margin-top:10px;"></div>
+	<p>修改二维码</p>
+	<input type="text" placeholder="url" class="erweima_val"/>
+	<button class="erweima_change">更新</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.qrcode.min.js"></script>
+<script>
+$(function () {
+	var $val = $('.erweima_val');
+	$('#output').qrcode("https://misued.com");
+	
+	$('.erweima_change').click(function () {
+		if ($val.val() != '') {
+			$('#output').html('').qrcode($val.val());
+		}
+	});
+	
+	
+	//上传静态文件，生成服务
+	$('.upload').submit(function (ev) {
+		var ev = ev || window.event;
+		ev.preventDefault();
+	});
+});
+</script>
+</html>

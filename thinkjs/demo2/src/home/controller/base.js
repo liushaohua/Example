@@ -1,7 +1,11 @@
 'use strict';
 
-export default class extends think.controller.base {
+import Base from '../../common/controller/index';
+
+export default class extends Base {
   /**
-   * some base method in here
-   */
+     * 初始化
+     *
+     * @param  {Object} http http
+     */
 }
